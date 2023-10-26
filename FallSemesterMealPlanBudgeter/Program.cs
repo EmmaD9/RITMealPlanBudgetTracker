@@ -15,7 +15,12 @@
 
             //gets and trims current date
             string currentDate = DateTime.Now.ToString();
-            //NEED TO TRIM THE TIME OFF ITS NOT NECESSARY
+            currentDate = currentDate.Substring(0, currentDate.Length - 11).Trim();
+            Console.WriteLine("The date is: " + currentDate);
+
+
+            //  ---PART ONE---
+                //collects data from users and ensures its the proper type and formatted correctly
 
             while (true)
             {
@@ -65,6 +70,9 @@
             
 
             Console.WriteLine("Today, {0}, you have a balance of {1} for your {2} meal plan.", currentDate, balance, mealPlan);
+
+
+            //  ---PART TWO---
         }
     }
 }
