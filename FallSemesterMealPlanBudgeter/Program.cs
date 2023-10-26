@@ -9,11 +9,36 @@
             bool roar = false;
             bool roarPlus = false;
 
-            //get user input
-            string currentDate = DateTime.Now.ToString();
+            //est variables
+            double balance = 0;
+            string userInput = "";
 
-            Console.WriteLine("What is your current meal plan balance?");
-            double balance = double.Parse(Console.ReadLine());
+            //gets and trims current date
+            string currentDate = DateTime.Now.ToString();
+            //NEED TO TRIM THE TIME OFF ITS NOT NECESSARY
+
+            while (true)
+            {
+                Console.WriteLine("What is your current meal plan balance?");
+                userInput = Console.ReadLine();
+
+                try
+                {
+                    balance = double.Parse(userInput);
+                    if (balance < 0 || balance > 2500)
+                    {
+                        Console.WriteLine("Inputted balance is not within range. Balance must be between 0-2500");
+                    } else
+                    {
+                        break;
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine(userInput + " is not a valid data type.");
+                }
+            }
+            
 
             Console.WriteLine("Do you have ROAR or ROAR PLUS as your meal plan type?");
             string mealPlan = Console.ReadLine().ToUpper().Trim();
