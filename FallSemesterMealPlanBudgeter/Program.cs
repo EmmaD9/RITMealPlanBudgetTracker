@@ -41,7 +41,7 @@
                 try
                 {
                     userBalance = double.Parse(userInput);
-                    if (balance < 0 || balance > 2500)
+                    if (userBalance < 0 || userBalance > 2500)
                     {
                         Console.WriteLine("Inputted balance is not within range. Balance must be between 0-2500");
                     } else
@@ -63,8 +63,8 @@
 
                 try
                 {
-                    userBalance = int.Parse(userInput);
-                    if (balance < 0 || balance > 100)
+                    userSwipes = int.Parse(userInput);
+                    if (userSwipes < 0 || userSwipes > 100)
                     {
                         Console.WriteLine("Inputted balance is not within range. Balance must be between 0-100");
                     }
