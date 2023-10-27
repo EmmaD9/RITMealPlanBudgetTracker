@@ -17,7 +17,6 @@
             //est variables
             double balance = 0;
             string userInput = "";
-            int daysNum = 17;
             int mealSwipes = 0;
             double balanceIncrement = 0;
             double swipeIncrement = 0;
@@ -93,7 +92,7 @@
 
             //date arrays
             //mayyyy have to remove the zeros on single digit dates
-            string[] dates = new string[daysNum];
+            string[] dates = new string[17];
                 dates[0] = "08/20";
                 dates[1] = "08/27";
                 dates[2] = "09/3";
@@ -116,17 +115,17 @@
 
             //figure out the month and day range
             int currentMonth = int.Parse(currentDate.Substring(0, currentDate.Length - 3));
-            int currentDay = int.Parse(currentDate.Substring(3, currentDate.Length));
+            int currentDay = int.Parse(currentDate.Substring(currentDate.Length-2, 2));
 
-            for (int i = 0; i <= daysNum; i++)
+            for (int i = 0; i < dates.Length; i++)
             {
                 int monthNum = int.Parse(dates[i].Substring(0, dates[i].Length - 3));
 
                 if (monthNum == currentMonth)
                 {
-                    int dayNum = int.Parse(dates[i].Substring(4, dates[i].Length));
+                    int dayNum = int.Parse(dates[i].Substring(dates[i].Length-2, 2));
 
-                    if (dayNum <= currentDay && dayNum >= currentDay)
+                    if (dayNum <= currentDay + 6 && dayNum >= currentDay - 6)
                     {
                         indexNum = i;
                         break;
