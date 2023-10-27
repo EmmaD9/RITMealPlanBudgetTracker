@@ -16,8 +16,10 @@
 
             //est variables
             double balance = 0;
+            double userBalance = 0;
             string userInput = "";
             int mealSwipes = 0;
+            int userSwipes = 0;
             double balanceIncrement = 0;
             double swipeIncrement = 0;
             int indexNum = 0;
@@ -25,12 +27,12 @@
             //gets and trims current date
             string currentDate = DateTime.Now.ToString();
             currentDate = currentDate.Substring(0, currentDate.Length - 16).Trim();
-            Console.WriteLine("The date is: " + currentDate);
 
 
             //  ---PART ONE---
                 //collects data from users and ensures its the proper type and formatted correctly
 
+            //dining dollars
             while (true)
             {
                 Console.WriteLine("What is your current meal plan balance?");
@@ -38,7 +40,7 @@
 
                 try
                 {
-                    balance = double.Parse(userInput);
+                    userBalance = double.Parse(userInput);
                     if (balance < 0 || balance > 2500)
                     {
                         Console.WriteLine("Inputted balance is not within range. Balance must be between 0-2500");
@@ -52,7 +54,31 @@
                     Console.WriteLine(userInput + " is not a valid data type.");
                 }
             }
-            
+
+            //meal swipes
+            while (true)
+            {
+                Console.WriteLine("What is your current swipe balance?");
+                userInput = Console.ReadLine();
+
+                try
+                {
+                    userBalance = int.Parse(userInput);
+                    if (balance < 0 || balance > 100)
+                    {
+                        Console.WriteLine("Inputted balance is not within range. Balance must be between 0-100");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine(userInput + " is not a valid data type.");
+                }
+            }
+
 
             Console.WriteLine("Do you have ROAR or ROAR PLUS as your meal plan type?");
             string mealPlan = Console.ReadLine().ToUpper().Trim();
@@ -85,10 +111,12 @@
                     Console.WriteLine("\tROAR or ROAR PLUS");
                     mealPlan = Console.ReadLine().ToUpper().Trim();
             }
-            
+
             //gives info to user
-            Console.WriteLine("Today, {0}, you have a balance of {1} for your {2} meal plan.", currentDate, balance, mealPlan);
-            Console.WriteLine("To begin with, you have {0} meal swipes and ${1}.", mealSwipes, balance);
+            Console.WriteLine("Date: " + currentDate);
+            Console.WriteLine("Original Balances: ${0} || {1}", balance, mealSwipes);
+            Console.WriteLine("Current Balances: ${0} || {1}", userBalance, userSwipes);
+
 
             //date arrays
             //mayyyy have to remove the zeros on single digit dates
@@ -114,8 +142,8 @@
             //  ---PART TWO---
 
             //figure out the month and day range
-            int currentMonth = int.Parse(currentDate.Substring(0, currentDate.Length - 3));
-            int currentDay = int.Parse(currentDate.Substring(currentDate.Length-2, 2));
+            int currentMonth = int.Parse(currentDate.Substring(0, currentDate.Length - 4));
+            int currentDay = int.Parse(currentDate.Substring(currentDate.Length-3, 2));
 
             for (int i = 0; i < dates.Length; i++)
             {
@@ -142,7 +170,7 @@
             Console.WriteLine("It is reccomended that you have {0} meal swipes and ${1} in dining dollars right now.", reccomendedSwipes, reccomendedBalance);
 
 
-            //check to see if the inputted balance is in the righrt range
+            //check to see if the inputted balance is in the right range
 
         }
     }
