@@ -54,12 +54,14 @@
                 {
                     roar = true;
                     mealPlan = "roar";
+                    break;
                 }
                 
-                if (mealPlan == "ROARPLUS")
+                if (mealPlan == "ROAR PLUS")
                 {
                     roarPlus = true;
                     mealPlan = "roar plus";
+                    break;
                 }
 
                     Console.WriteLine("Meal plan type not recognized, try again please.");
