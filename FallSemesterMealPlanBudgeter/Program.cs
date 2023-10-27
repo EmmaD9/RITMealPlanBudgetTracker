@@ -111,7 +111,7 @@
                 dates[15] = "12/03";
                 dates[16] = "12/10";
 
-            //CALCULATIONS
+            //  ---PART TWO---
 
             //figure out the month and day range
             int currentMonth = int.Parse(currentDate.Substring(0, currentDate.Length - 3));
@@ -134,9 +134,13 @@
             }
 
             Console.WriteLine("You are on week " + indexNum);
-            
 
             //reccomended range: substract the increments multiplied by the array location
+            double reccomendedSwipes = mealSwipes - (swipeIncrement * indexNum);
+            double reccomendedBalance = balance - (balanceIncrement * indexNum);
+
+            Console.WriteLine("It is reccomended that you have {0} meal swipes and ${1} in dining dollars right now.", reccomendedSwipes, reccomendedBalance);
+
 
             //check to see if the inputted balance is in the righrt range
 
