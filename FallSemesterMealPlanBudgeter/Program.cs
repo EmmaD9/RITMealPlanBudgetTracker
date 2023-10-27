@@ -21,6 +21,7 @@
             int mealSwipes = 0;
             double balanceIncrement = 0;
             double swipeIncrement = 0;
+            int indexNum = 0;
 
             //gets and trims current date
             string currentDate = DateTime.Now.ToString();
@@ -113,9 +114,28 @@
 
             //CALCULATIONS
 
-            //figure out the month range
+            //figure out the month and day range
+            int currentMonth = int.Parse(currentDate.Substring(0, currentDate.Length - 3));
+            int currentDay = int.Parse(currentDate.Substring(3, currentDate.Length));
 
-            //figure out the day range
+            for (int i = 0; i <= daysNum; i++)
+            {
+                int monthNum = int.Parse(dates[i].Substring(0, dates[i].Length - 3));
+
+                if (monthNum == currentMonth)
+                {
+                    int dayNum = int.Parse(dates[i].Substring(4, dates[i].Length));
+
+                    if (dayNum <= currentDay && dayNum >= currentDay)
+                    {
+                        indexNum = i;
+                        break;
+                    }
+                }
+            }
+
+            Console.WriteLine("You are on week " + indexNum);
+            
 
             //reccomended range: substract the increments multiplied by the array location
 
