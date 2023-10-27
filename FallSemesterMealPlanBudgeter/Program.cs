@@ -8,10 +8,19 @@
             //meal plan types
             bool roar = false;
             bool roarPlus = false;
+            double roarSwipeIncrement = 3.5;
+            double roarBalanceIncrement = 156.25;
+            double roarPlusSwipeIncrement = 6.5;
+            double roarPlusBalanceIncrement = 143.75;
+
 
             //est variables
             double balance = 0;
             string userInput = "";
+            int daysNum = 17;
+            int mealSwipes = 0;
+            double balanceIncrement = 0;
+            double swipeIncrement = 0;
 
             //gets and trims current date
             string currentDate = DateTime.Now.ToString();
@@ -54,6 +63,10 @@
                 {
                     roar = true;
                     mealPlan = "roar";
+                    mealSwipes = 50;
+                    balance = 2500;
+                    swipeIncrement = roarSwipeIncrement;
+                    balanceIncrement = roarBalanceIncrement;
                     break;
                 }
                 
@@ -61,6 +74,10 @@
                 {
                     roarPlus = true;
                     mealPlan = "roar plus";
+                    mealSwipes = 100;
+                    balance = 2300;
+                    swipeIncrement = roarPlusSwipeIncrement;
+                    balanceIncrement = roarPlusBalanceIncrement;
                     break;
                 }
 
@@ -69,11 +86,33 @@
                     mealPlan = Console.ReadLine().ToUpper().Trim();
             }
             
-
+            //gives info to user
             Console.WriteLine("Today, {0}, you have a balance of {1} for your {2} meal plan.", currentDate, balance, mealPlan);
+            Console.WriteLine("To begin with, you have {0} meal swipes and ${1}.", mealSwipes, balance);
 
 
             //  ---PART TWO---
+
+            //arrays
+            string[] dates = new string[daysNum];
+                dates[0] = "8/20/2023";
+                dates[1] = "8/27/2023";
+                dates[2] = "9/3/2023";
+                dates[3] = "9/10/2023";
+                dates[4] = "9/17/2023";
+                dates[5] = "9/24/2023";
+                dates[6] = "10/1/2023";
+                dates[7] = "10/8/2023";
+                dates[8] = "10/15/2023";
+                dates[9] = "10/22/2023";
+                dates[10] = "10/29/2023";
+                dates[11] = "11/5/2023";
+                dates[12] = "11/12/2023";
+                dates[13] = "11/19/2023";
+                dates[14] = "11/26/2023";
+                dates[15] = "12/3/2023";
+                dates[16] = "12/10/2023";
+
         }
     }
 }
