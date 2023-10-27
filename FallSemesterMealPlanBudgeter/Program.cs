@@ -26,7 +26,7 @@
 
             //gets and trims current date
             string currentDate = DateTime.Now.ToString();
-            currentDate = currentDate.Substring(0, currentDate.Length - 16).Trim();
+            currentDate = currentDate.Substring(0, currentDate.Length - 17).Trim();
 
 
             //  ---PART ONE---
@@ -170,7 +170,7 @@
             Console.WriteLine("It is reccomended that you have {0} meal swipes and ${1} in dining dollars right now.", reccomendedSwipes, reccomendedBalance);
 
             //check to see if the inputted balance is in the right range
-            if (reccomendedBalance < userBalance)
+            if (reccomendedBalance - balanceIncrement <= userBalance && reccomendedBalance + balanceIncrement <= userBalance)
             {
                 Console.WriteLine("Good job, you are above budget.");
             } else
@@ -187,6 +187,8 @@
             {
                 Console.WriteLine("You may want to check your Gracie's habits, because seriously you're going to get food poisoning.");
             }
+
+            Console.WriteLine("disclaimer: not at all affiliated with RIT and also the programmer is #badatmath so idk man");
 
         }
     }
