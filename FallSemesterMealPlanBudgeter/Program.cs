@@ -169,8 +169,24 @@
 
             Console.WriteLine("It is reccomended that you have {0} meal swipes and ${1} in dining dollars right now.", reccomendedSwipes, reccomendedBalance);
 
-
             //check to see if the inputted balance is in the right range
+            if (reccomendedBalance < userBalance)
+            {
+                Console.WriteLine("Good job, you are above budget.");
+            } else
+            {
+                Console.WriteLine("You may want to check your spending habits.");
+            }
+
+            //check to see if the inputted meal swipes are in the right range
+            if (reccomendedSwipes < userSwipes)
+            {
+                Console.WriteLine("Good job, you have plenty of Gracie's swipes.");
+            }
+            else
+            {
+                Console.WriteLine("You may want to check your Gracie's habits, because seriously you're going to get food poisoning.");
+            }
 
         }
     }
