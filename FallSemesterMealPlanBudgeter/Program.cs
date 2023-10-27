@@ -161,16 +161,18 @@
                 }
             }
 
-            Console.WriteLine("You are on week " + indexNum);
+            int weekNum = indexNum + 1;
+
+            Console.WriteLine("You are on week " + weekNum);
 
             //reccomended range: substract the increments multiplied by the array location
-            double reccomendedSwipes = mealSwipes - (swipeIncrement * indexNum);
-            double reccomendedBalance = balance - (balanceIncrement * indexNum);
+            double reccomendedSwipes = mealSwipes - (swipeIncrement * weekNum);
+            double reccomendedBalance = balance - (balanceIncrement * weekNum);
 
-            Console.WriteLine("It is reccomended that you have {0} meal swipes and ${1} in dining dollars right now.", reccomendedSwipes, reccomendedBalance);
+            Console.WriteLine("It is reccomended that you have {0} meal swipes and ${1} in dining dollars at the end of this week.", reccomendedSwipes, reccomendedBalance);
 
             //check to see if the inputted balance is in the right range
-            if (reccomendedBalance - balanceIncrement <= userBalance && reccomendedBalance + balanceIncrement <= userBalance)
+            if (reccomendedBalance - balanceIncrement <= userBalance)
             {
                 Console.WriteLine("Good job, you are above budget.");
             } else
