@@ -55,17 +55,16 @@
                     roar = true;
                     mealPlan = "roar";
                 }
-                else if (mealPlan == "ROARPLUS")
+                
+                if (mealPlan == "ROARPLUS")
                 {
                     roarPlus = true;
                     mealPlan = "roar plus";
                 }
-                else
-                {
+
                     Console.WriteLine("Meal plan type not recognized, try again please.");
                     Console.WriteLine("\tROAR or ROAR PLUS");
                     mealPlan = Console.ReadLine().ToUpper().Trim();
-                }
             }
             
 
