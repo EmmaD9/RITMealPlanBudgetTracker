@@ -26,7 +26,7 @@
 
             //gets and trims current date
             string currentDate = DateTime.Now.ToString();
-            currentDate = currentDate.Substring(0, currentDate.Length - 17).Trim();
+            currentDate = currentDate.Substring(0, currentDate.Length - 16).Trim();
 
 
             //  ---PART ONE---
@@ -113,7 +113,7 @@
             }
 
             //gives info to user
-            Console.WriteLine("Date: " + currentDate);
+            Console.WriteLine("Date: " + currentDate.Substring(0, currentDate.Length - 1));
             Console.WriteLine("Original Balances: ${0} || {1}", balance, mealSwipes);
             Console.WriteLine("Current Balances: ${0} || {1}", userBalance, userSwipes);
 
