@@ -24,7 +24,7 @@
 
             //gets and trims current date
             string currentDate = DateTime.Now.ToString();
-            currentDate = currentDate.Substring(0, currentDate.Length - 11).Trim();
+            currentDate = currentDate.Substring(0, currentDate.Length - 16).Trim();
             Console.WriteLine("The date is: " + currentDate);
 
 
@@ -90,28 +90,36 @@
             Console.WriteLine("Today, {0}, you have a balance of {1} for your {2} meal plan.", currentDate, balance, mealPlan);
             Console.WriteLine("To begin with, you have {0} meal swipes and ${1}.", mealSwipes, balance);
 
-
-            //  ---PART TWO---
-
-            //arrays
+            //date arrays
+            //mayyyy have to remove the zeros on single digit dates
             string[] dates = new string[daysNum];
-                dates[0] = "8/20/2023";
-                dates[1] = "8/27/2023";
-                dates[2] = "9/3/2023";
-                dates[3] = "9/10/2023";
-                dates[4] = "9/17/2023";
-                dates[5] = "9/24/2023";
-                dates[6] = "10/1/2023";
-                dates[7] = "10/8/2023";
-                dates[8] = "10/15/2023";
-                dates[9] = "10/22/2023";
-                dates[10] = "10/29/2023";
-                dates[11] = "11/5/2023";
-                dates[12] = "11/12/2023";
-                dates[13] = "11/19/2023";
-                dates[14] = "11/26/2023";
-                dates[15] = "12/3/2023";
-                dates[16] = "12/10/2023";
+                dates[0] = "08/20";
+                dates[1] = "08/27";
+                dates[2] = "09/3";
+                dates[3] = "09/10";
+                dates[4] = "09/17";
+                dates[5] = "09/24";
+                dates[6] = "10/01";
+                dates[7] = "10/08";
+                dates[8] = "10/15";
+                dates[9] = "10/22";
+                dates[10] = "10/29";
+                dates[11] = "11/05";
+                dates[12] = "11/12";
+                dates[13] = "11/19";
+                dates[14] = "11/26";
+                dates[15] = "12/03";
+                dates[16] = "12/10";
+
+            //CALCULATIONS
+
+            //figure out the month range
+
+            //figure out the day range
+
+            //reccomended range: substract the increments multiplied by the array location
+
+            //check to see if the inputted balance is in the righrt range
 
         }
     }
