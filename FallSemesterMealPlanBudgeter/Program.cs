@@ -25,9 +25,7 @@
             int indexNum = 0;
 
             //gets and trims current date
-            string currentDate = DateTime.Now.ToString();
-            currentDate = currentDate.Substring(0, currentDate.Length - 16).Trim();
-
+            string currentDate = DateTime.Now.ToString("MM/dd");
 
             //  ---PART ONE---
                 //collects data from users and ensures its the proper type and formatted correctly
@@ -113,7 +111,7 @@
             }
 
             //gives info to user
-            Console.WriteLine("Date: " + currentDate.Substring(0, currentDate.Length - 1));
+            Console.WriteLine("Date: " + currentDate);
             Console.WriteLine("Original Balances: ${0} || {1}", balance, mealSwipes);
             Console.WriteLine("Current Balances: ${0} || {1}", userBalance, userSwipes);
 
@@ -142,8 +140,8 @@
             //  ---PART TWO---
 
             //figure out the month and day range
-            int currentMonth = int.Parse(currentDate.Substring(0, currentDate.Length - 4));
-            int currentDay = int.Parse(currentDate.Substring(currentDate.Length-3, 2));
+            int currentMonth = int.Parse(currentDate.Split('/')[0]);
+            int currentDay = int.Parse(currentDate.Split('/')[1]);
 
             for (int i = 0; i < dates.Length; i++)
             {
