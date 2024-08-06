@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecondYearMealPlanTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3829f4f2d94925904522f8971bf0d359c7a76f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0349b7e5c6fe1633eac3ea05ff3cfc1f4b19c1d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecondYearMealPlanTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecondYearMealPlanTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
