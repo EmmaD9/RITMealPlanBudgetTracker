@@ -7,7 +7,13 @@
             Console.WriteLine("Budget tracker for fall semester second year!");
 
             //Get the meal plan type
-            Console.WriteLine("What meal plan do you have? (Roar/Roar Plus)");
+            Console.WriteLine("How many dining dollars to start?");
+
+            Console.WriteLine("How many swipes to start?");
+
+            Console.WriteLine("How many dollars do you currently have?");
+
+            Console.WriteLine("How many swipes do you currently have?");
 
 
 
